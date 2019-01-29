@@ -2,12 +2,15 @@ filebeat:
     prospectors:
         -
             paths:
-                - "/var/log/nginx/*access.log"
+                - "/var/log/nginx/proxy_host-*.log"
+                - "/var/log/nginx/dead_host-*.log"
+                - "/var/log/nginx/default.log"
+                - "/var/log/nginx/letsencrypt-requests.log"
             document_type: nginx-access
             encoding: utf-8
         -
             paths:
-                - "/var/log/nginx/*error.log"
+                - "/var/log/nginx/error.log"
             document_type: nginx-error
             encoding: utf-8
 output:

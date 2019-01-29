@@ -1,4 +1,4 @@
-Filebeat for nginx
+Filebeat for NginxProxyManager
 ------------------
 
 How to use?
@@ -9,13 +9,13 @@ How to use?
 In nginx logs directory
 
 ```bash
-docker run --rm -v `echo $( pwd )`:/var/log/nginx/ -e LOGSTASH_HOST='172.17.0.1' mishamx/filebeat-nginx:latest
+docker run --rm -v `echo $( pwd )`:/var/log/nginx/ -e LOGSTASH_HOST='172.17.0.1' vrelk/filebeat-nginxpm:latest
 ```
 
 or set full path
 
 ```bash
-docker run --rm -v /var/log/nginx:/var/log/nginx/ -e LOGSTASH_HOST='172.17.0.1' mishamx/filebeat-nginx:latest
+docker run --rm -v /var/log/nginx:/var/log/nginx/ -e LOGSTASH_HOST='172.17.0.1' vrelk/filebeat-nginxpm:latest
 ```
 
 Environment
